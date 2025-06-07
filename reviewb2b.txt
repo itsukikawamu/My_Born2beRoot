@@ -1,0 +1,19 @@
+ホスト名の変更　sudo hostname ホスト名 のあとログアウトログインで適用
+sudo rebootで元通り
+
+sudo adduser ユーザー名でユーザー追加してパスワード設定ホームディレクトリも作られる
+passwd コマンドでパスワード変更。詳細後述
+sudo groupadd/groupdel でグループ新規作成/削除
+sudo gpasswd -a/dユーザ名  グループ名　でユーザをグループに追加/削除
+sudo deluser ユーザ名　で削除
+
+# タイマーを停止
+sudo systemctl stop monitoring.timer
+# 再開
+sudo systemctl start monitoring.timer
+# 次回起動時に起動しないように無効化
+sudo systemctl disable monitoring.timer
+
+sudo nano /etc/systemd/system/monitoring.timerで設定変えたら
+sudo systemctl daemon-reload
+sudo systemctl restart monitoring.timer
