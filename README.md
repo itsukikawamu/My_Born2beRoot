@@ -329,6 +329,7 @@ FLUSH PRIVILEGES;
 ```
 
 ブラウザで `http://192.168.60.2` にアクセスし WordPress 初期設定を完了。
+記事を作成して公開。
 
 ### 8.2 Git server (SSH)
 
