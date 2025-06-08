@@ -99,7 +99,7 @@ ufw enable                # 有効化
 apt install sudo
 usermod -aG sudo ikawamuk
 groups ikawamuk          	# sudo 参加確認
-visudo -f /etc/sudoers.d/b2b_rules
+visudo -f /etc/sudoers.d/b2b_rules # ルールに以下を記述
 ```
 
 `/etc/sudoers.d/b2b_rules` 例:
