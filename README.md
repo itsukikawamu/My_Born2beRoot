@@ -299,7 +299,7 @@ password requisite pam_pwquality.so retry=3
 
 ## 8. ボーナス
 
-### 8.1 WordPress + lighttpd
+### 8.1 WordPress
 
 ```bash
 apt install php-cgi mariadb-server lighttpd wget php-mysql
