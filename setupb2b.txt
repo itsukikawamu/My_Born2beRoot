@@ -1,4 +1,4 @@
-０.VB上でのホスト側の設定と事前インストール
+０.VB上でのホスト側の設定と事前インストール
 言語を日本語に
 入力＞仮想マシン＞ホストキーの組み合わせを左ctl + 左cmmand(windows)キー
 一般デフォルトの仮想マシンフォルダを/sgoinfre
@@ -31,13 +31,13 @@ Devices to encryptで全部選択
 Use as:をExt4(swapはswap area)と、lv名をもとにMount point:を編集 
 -Done setting up -yes -Finish; Finish Partitioning and write changes to disk;
 今回はブートローダがBIOS(UFEIだと動かなかった)なので互換性のあるMBRパーティション。
-lsblk（list block devices)コマンドで確認可
+lsblk(list block devices)コマンドで確認可
 ＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊
 Scan extra installation mediaをNo
 Debian archive mirror countryをUS,  archive mirrorをdeb_ebian_org
 HTTP proxy infoを空欄、Participate in the package usage survey?をNo
 choose software installをspaceキーですべての選択外しenter
-install the GRUB boot loader to your primary drive? をYes/dev/sdaを選択reboot?をContinue
+install the GRUB boot loader to your primary drive? をYes/dev/sdaを選択 reboot?をContinue
 
 ２.起動、ログイン、初期設定の確認
 login: root password:入力してルートユーザーでログイン
@@ -170,7 +170,7 @@ After=multi-user.target
 [Service]
 Type=oneshot
 ExecStart=/usr/local/bin/monitoring_sh
- /etc/systemd/system/monitoring.timerに以下を追加[Unit]
+  /etc/systemd/system/monitoring.timerに以下を追加 [Unit]
 Description=Run monitoring_sh every 10 minutes
 After=multi-user.target
 Requires=multi-user.target network.target
@@ -188,7 +188,7 @@ sudo systemctl status monitoring.timerで確認
 パスワードポリシーの設定
 DebianもsudoもPAM(Pluggable Authentication Modules)をつかって認証をしてる。
 sudo apt install libpam-pwquality　をすると
-/etc/pam.d/common-passwordにpassword	requisite			pam_pwquality.so retry=3が追加され認証時に		pam_pwquality.soが使われる。pam_pwquality.soは/etc/security/pwquality.confを参照する。/etc/security/pwquality.confに以下を。
+/etc/pam.d/common-passwordにpassword	requisite			pam_pwquality.so retry=3 が追加され認証時に		pam_pwquality.soが使われる。pam_pwquality.soは/etc/security/pwquality.confを参照する。/etc/security/pwquality.confに以下を。
 difok = 7
 minlen = 10
 dcredit = -1
