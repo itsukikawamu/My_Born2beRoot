@@ -301,11 +301,14 @@ password requisite pam_pwquality.so retry=3
 
 ### 8.1 WordPress
 
+lighttpd 設定:
+
 ```bash
 apt install php-cgi mariadb-server lighttpd wget php-mysql
 lighty-enable-mod fastcgi fastcgi-php
 systemctl restart lighttpd
 ```
+wordpressインストール:
 
 ```bash
 cd /tmp
