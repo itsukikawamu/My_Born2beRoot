@@ -73,12 +73,12 @@
 
 ```bash
 # root でログイン
-dpkg -l								# インストール済み一覧
-dpkg -s <pkg>						# 個別パッケージ情報
-apt update && apt upgrade			# システム更新
-systemctl status apparmor			# AppArmor 起動確認
+dpkg -l						# インストール済み一覧
+dpkg -s <pkg>					# 個別パッケージ情報
+apt update && apt upgrade	# システム更新
+systemctl status apparmor	# AppArmor 起動確認
 timedatectl set-timezone Asia/Tokyo	# タイムゾーンを日本へ
-date								# 日本時刻へ変更済みか確認
+date						# 日本時刻へ変更済みか確認
 ```	
 
 ---
