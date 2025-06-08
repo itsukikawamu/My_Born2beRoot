@@ -297,7 +297,7 @@ password requisite pam_pwquality.so retry=3
 
 ---
 
-## 8. 追加構築
+## 8. ボーナス
 
 ### 8.1 WordPress + lighttpd
 
@@ -465,4 +465,3 @@ git clone ssh://git@192.168.60.2:4242/srv/git/myproject.git
 - Git：分散型VCS
 - Gitサーバー：リモートリポジトリ管理
 - 自鯖の利点：セキュリティ、コスト、自由度、オフライン利用可
-"""
