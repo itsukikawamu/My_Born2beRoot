@@ -98,7 +98,7 @@ ufw enable                # 有効化
 ```bash
 apt install sudo
 usermod -aG sudo ikawamuk
-groups ikawamuk          		# sudo 参加確認
+groups ikawamuk          	# sudo 参加確認
 visudo -f /etc/sudoers.d/b2b_rules
 ```
 
