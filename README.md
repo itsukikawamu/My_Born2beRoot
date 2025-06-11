@@ -187,7 +187,9 @@ ufw status verbose
 
 ```bash
 #!/bin/bash
-until who | grep -q .; do sleep 1; done
+until who | grep -q .; do   
+	sleep 1;  
+done
 
 BANNER=$(figlet "System Monitor")
 ARCH=$(uname -a)
