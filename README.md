@@ -484,3 +484,46 @@ git clone ssh://git@192.168.60.2:4242/srv/git/myproject.git
 - Git：分散型VCS
 - Gitサーバー：リモートリポジトリ管理
 - 自鯖の利点：セキュリティ、コスト、自由度、オフライン利用可
+
+# レビュー時用コマンドカンペ
+
+## 使用しているOSの確認
+
+```bash
+hostnamectl
+```
+
+## ホスト名の変更
+
+```bash
+sudo hostname 新しいホスト名   # 一時的に変更（再起動で元に戻る）
+```
+
+反映にはログアウト・ログインが必要  
+恒久的に変更するには `/etc/hostname` の編集が必要です（ここでは省略）
+
+## ユーザー・グループ管理
+
+```bash
+sudo adduser ユーザー名         # ユーザー追加（パスワード設定・ホームディレクトリ作成付き）
+passwd ユーザー名              # パスワード変更
+
+sudo groupadd グループ名       # グループ新規作成
+sudo groupdel グループ名       # グループ削除
+
+sudo gpasswd -a ユーザー名 グループ名  # グループにユーザーを追加
+sudo gpasswd -d ユーザー名 グループ名  # グループからユーザーを削除
+
+sudo deluser ユーザー名         # ユーザー削除
+```
+
+## systemd タイマー管理（monitoring.timer）
+
+```bash
+sudo systemctl stop monitoring.timer        # タイマーを停止
+sudo systemctl start monitoring.timer       # タイマーを再開
+sudo systemctl disable monitoring.timer     # 次回起動時に自動起動しないようにする
+
+sudo nano /etc/systemd/system/monitoring.timer  # 設定ファイルを編集
+sudo systemctl daemon-reload                    # systemdに変更を反映
+sudo systemctl restart monitoring.timer         # タイマーを再起動
