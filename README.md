@@ -234,6 +234,8 @@ apt install figlet
 
 ### 6.2 cron 例
 
+cronは使用せずsystemd timerだけでよいがレビューで設定のやり方を聞かれる可能性がある
+
 ```
 @reboot  /usr/local/bin/monitoring_sh
 */10 * * * * /usr/local/bin/monitoring_sh
