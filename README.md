@@ -297,6 +297,14 @@ enforce_for_root
 password requisite pam_pwquality.so retry=3
 ```
 
+`/etc/login.defs` の設定例:
+
+```
+PASS_MAX_DAYS   30    # パスワードの有効期限（日数）
+PASS_MIN_DAYS   2     # パスワード変更間隔（日数）
+PASS_WARN_AGE   7     # 有効期限警告の開始日数
+```
+
 ---
 
 ## 8. ボーナス
