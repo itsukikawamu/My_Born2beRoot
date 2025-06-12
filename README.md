@@ -183,7 +183,7 @@ ufw status verbose
 
 ## 6. モニタリングスクリプト
 
-### 6.1 本体 `/usr/local/bin/monitoring_sh`
+### 6.1 本体 `/usr/local/bin/monitoring.sh`
 
 ```bash
 #!/bin/bash
@@ -228,7 +228,7 @@ EOF
 ```
 
 ```bash
-chmod 700 /usr/local/bin/monitoring_sh
+chmod 700 /usr/local/bin/monitoring.sh
 apt install figlet
 ```
 
